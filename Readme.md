@@ -1,13 +1,20 @@
 # Nonlocal Low-Rank Tensor (NLRT)
 This repository contains the MATLAB code for the paper **Hyperspectral Image Reconstruction of SD-CASSI Based on Nonlocal Low-Rank Tensor Prior**.
 
-**[New] Real data and associated code are available at [this link on Google Drive](https://drive.google.com/open?id=1d2uh9nuOL5Z7WnEQJ5HZSDMWK2VAT9sH) or [Baidu Drive](https://pan.baidu.com/s/1mEODhEd0_zP4-hBhWUTp2g).** Note that the code for real data is not tested but with raw results as in the paper. Please refer to the readme file for the original source(s) of the real data.
+**All test data are available at [this link on Google Drive](https://drive.google.com/drive/folders/1DH7-Z6y5X-lqQyO-J3Sy3R68NKUUdH8I?usp=sharing) or [Aliyun Drive](https://www.alipan.com/s/5qXGSbCqmgK).**
 
 <p align="center">
-<img src="https://github.com/liuyang12/DeSCI/blob/master/results/video/desci_gmm_gaptv_kobe32.gif?raw=true">
+<img src="https://sdnjyxr.github.io/NLRT/results/S3.gif?raw=true">
 </p>
 
-Figure 1. Reconstructed `Kobe` video using DeSCI compared with the state-of-the-art methods, *i.e.*, GMM-TP (TIP'14), MMLE-GMM (TIP'15), MMLE-MFA (TIP'15), and GAP-TV (ICIP'16). Here, 8 video frames are encoded in a single measurement and a total of 32 frames are presented by reconstructing 4 snapshot measurements. The `Kobe` video is used in the MMLE-GMM [paper](https://doi.org/10.1109/TIP.2014.2365720 "Compressive Sensing by Learning a Gaussian Mixture Model From Measurements, TIP'15").
+Figure 1. Reconstruction process of the hyperspectral image for scenario S3 as described in the corresponding paper.
+
+<p align="center">
+<img src="https://sdnjyxr.github.io/NLRT/results/S4.gif?raw=true">
+</p>
+
+Figure 2. Reconstruction process of the hyperspectral image for scenario S4 as described in the corresponding paper.
+
 
 ## Usage
 ### Download the NLRT repository
@@ -17,26 +24,21 @@ Figure 1. Reconstructed `Kobe` video using DeSCI compared with the state-of-the-
 git clone https://github.com/sdnjyxr/NLRT
 ```
 ### Run NLRT on hyperspectral images
-3. Test the DeSCI algorithm (for hyperspectral imaging, that is CASSI on `toy` dataset) via
+3. Test the NLRT algorithm via
 ```matlab
-test_desci_cassi.m
-```
-and (optionally) video demonstrate the reconstruction results (after running `test_desci_cassi.m`) via
-```matlab
-./figures/fig_desci_cassi.m
+NLRT.m
 ```
 
 ## Structure of directories
 
 | directory  | description  |
 | :--------: | :----------- | 
-| `algorithms` | MATLAB functions of main algorithms proposed in the paper (original) | 
-| `figures`    | MATLAB scripts to reproduce the results and figures in the paper (original) |
-| `packages`   | algorithms adapted from the state-of-art algorithms (adapted)|
-| `dataset`    | data used for reconstruction (simulated) |
-| `results`    | results of reconstruction (after reconstruction) |
-| `utils`      | utility functions |
+| `datasets` | data used for reconstruction             | 
+| `funs`     | functions of main algorithms             |
+| `results`  | reconstruction results                   |
+| `tools`    | the toolbox used by the main algorithm   |
+| `utils`    | utility functions                        |
 
 ## Platform
-The test platform is MATLAB(R) R2023a operating on Ubuntu 22.10 with an Intel® Xeon® w7-2495X × 48 and 256 GB RAM. It can run on any machine with MATLAB(R) and Parallel Computing Toolbox, operating on Windows(R), Linux, or Mac OS. No GPU is needed to run this code.
+The testing environment utilizes MATLAB(R) R2023a on Ubuntu 22.10, equipped with an Intel® Xeon® w7-2495X × 48 processor and 256 GB RAM. It is compatible with any system running MATLAB(R) and Parallel Computing Toolbox, including Windows(R), Linux, or Mac OS. GPU is not required for running this code.
 
