@@ -1,7 +1,7 @@
 # Nonlocal Low-Rank Tensor (NLRT)
 This repository contains the MATLAB code for the paper **Hyperspectral Image Reconstruction of SD-CASSI Based on Nonlocal Low-Rank Tensor Prior**.
 
-**All test data are available at [this link on Google Drive](https://drive.google.com/drive/folders/1DH7-Z6y5X-lqQyO-J3Sy3R68NKUUdH8I?usp=sharing) or [Aliyun Drive](https://www.alipan.com/s/5qXGSbCqmgK).**
+**All test data are available at [this link on Google Drive](https://drive.google.com/drive/folders/1DH7-Z6y5X-lqQyO-J3Sy3R68NKUUdH8I?usp=sharing).**
 
 <p align="center">
 <img src="https://sdnjyxr.github.io/NLRT/results/S3.gif?raw=true">
